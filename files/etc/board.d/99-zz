@@ -1,0 +1,10 @@
+. /lib/functions/uci-defaults.sh
+
+board_config_update
+
+# ucidef_set_hostname "zzImmortalwrt"
+# ucidef_set_root_password_plain "password"
+ucidef_set_country "CN"
+ucidef_set_wireless "all" "zzzzzzzzzz" "psk2+ccmp" "zzzzzzzzzz"
+
+board_config_flush

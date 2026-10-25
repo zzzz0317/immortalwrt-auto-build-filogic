@@ -1,0 +1,6 @@
+#!/bin/sh
+sed -i "/^ZZ_DISTRIB_NAME=/d" /etc/openwrt_release
+sed -i "/^ZZ_DISTRIB_VERSION=/d" /etc/openwrt_release
+sed -i "1i ZZ_DISTRIB_NAME='ImmortalWrt for $(cat /tmp/sysinfo/model)'" /etc/openwrt_release
+sed -i "2i ZZ_DISTRIB_VERSION='DEV'" /etc/openwrt_release
+/bin/sync
